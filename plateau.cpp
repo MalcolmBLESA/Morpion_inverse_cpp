@@ -1,0 +1,44 @@
+#include "plateau.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+C_plateau::C_plateau()
+{
+
+}
+
+void C_plateau::initialiser()
+{
+    grille[0][0] = '.';
+    grille[0][1] = '.';
+    grille[0][2] = '.';
+    grille[1][0] = '.';
+    grille[1][1] = '.';
+    grille[1][2] = '.';
+    grille[2][0] = '.';
+    grille[2][1] = '.';
+    grille[2][2] = '.';
+}
+
+void C_plateau::afficher()
+{
+    cout << setw(5) << left << ""<< setw(6) << left << 1<< setw(7) << left << 2<< 3<< endl;
+    cout << "  +-----+-----+-----+" << endl
+         << "1 |  "<<grille[0][0]<<"  |  "<<grille[0][1]<<"  |  "<<grille[0][2]<<"  |" << endl
+         << "  +-----+-----+-----+" << endl
+         << "2 |  "<<grille[1][0]<<"  |  "<<grille[1][1]<<"  |  "<<grille[1][2]<<"  |" << endl
+         << "  +-----+-----+-----+" << endl
+         << "3 |  "<<grille[2][0]<<"  |  "<<grille[2][1]<<"  |  "<<grille[2][2]<<"  |" << endl
+         << "  +-----+-----+-----+" << endl;
+}
+
+bool C_plateau::caseLibre(char x,char y)
+{
+    if (grille[x][y] == '.')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
+}
