@@ -10,7 +10,7 @@ public:
     void initialiser();
     void afficher();
     bool caseLibre(char x,char y);
-    void poserSymbole();
+    void poserSymbole(char x,char y , char joueur);
     bool victoire();
     bool estPlein();
 };

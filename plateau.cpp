@@ -32,13 +32,34 @@ void C_plateau::afficher()
          << "  +-----+-----+-----+" << endl;
 }
 
-bool C_plateau::caseLibre(char x,char y)
+bool C_plateau::caseLibre(char mx,char my)
 {
-    if (grille[x][y] == '.')
+    if (grille[mx][my] == '.')
     {
         return true;
-    }else
-    {
-        return false;
     }
+}
+
+void C_plateau::poserSymbole(char mx , char my , char mJoueur)
+{
+    grille[mx][my] = mJoueur;
+}
+
+bool C_plateau::victoire()
+{
+    if (grille[0][0] == grille[0][1] && grille[0][1] == grille[0][2] ||
+        grille[1][0] == grille[1][1] && grille[1][1] == grille[1][2] ||
+        grille[2][0] == grille[2][1] && grille[2][1] == grille[2][2] ||
+        //horizontal
+        grille[0][0] == grille[1][0] && grille[1][0] == grille[2][0] ||
+        grille[0][1] == grille[1][1] && grille[1][1] == grille[2][1] ||
+        grille[0][2] == grille[1][2] && grille[1][2] == grille[2][2] ||
+        //verticale
+        grille[0][0] == grille[1][1] && grille[1][1] == grille[2][2] ||
+        grille[0][2] == grille[1][1] && grille[1][1] == grille[2][0] ||
+        //diagonale
+        )
+        {
+            return true 
+        }
 }
