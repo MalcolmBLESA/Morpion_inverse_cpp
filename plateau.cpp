@@ -39,7 +39,7 @@ bool C_plateau::caseLibre(char mx,char my)
         return true;
     }else
     {
-        return false
+        return false;
     }
 }
 
