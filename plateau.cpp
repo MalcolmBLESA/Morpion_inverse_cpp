@@ -37,6 +37,9 @@ bool C_plateau::caseLibre(char mx,char my)
     if (grille[mx][my] == '.')
     {
         return true;
+    }else
+    {
+        return false
     }
 }
 
@@ -47,19 +50,22 @@ void C_plateau::poserSymbole(char mx , char my , char mJoueur)
 
 bool C_plateau::victoire()
 {
-    if (grille[0][0] == grille[0][1] && grille[0][1] == grille[0][2] ||
-        grille[1][0] == grille[1][1] && grille[1][1] == grille[1][2] ||
-        grille[2][0] == grille[2][1] && grille[2][1] == grille[2][2] ||
-        //horizontal
-        grille[0][0] == grille[1][0] && grille[1][0] == grille[2][0] ||
-        grille[0][1] == grille[1][1] && grille[1][1] == grille[2][1] ||
-        grille[0][2] == grille[1][2] && grille[1][2] == grille[2][2] ||
-        //verticale
-        grille[0][0] == grille[1][1] && grille[1][1] == grille[2][2] ||
-        grille[0][2] == grille[1][1] && grille[1][1] == grille[2][0] ||
-        //diagonale
-        )
+    if (// horizontal
+        (grille[0][0] != '.' && grille[0][0] == grille[0][1] && grille[0][1] == grille[0][2]) ||
+        (grille[1][0] != '.' && grille[1][0] == grille[1][1] && grille[1][1] == grille[1][2]) ||
+        (grille[2][0] != '.' && grille[2][0] == grille[2][1] && grille[2][1] == grille[2][2]) ||
+        // vertical
+        (grille[0][0] != '.' && grille[0][0] == grille[1][0] && grille[1][0] == grille[2][0]) ||
+        (grille[0][1] != '.' && grille[0][1] == grille[1][1] && grille[1][1] == grille[2][1]) ||
+        (grille[0][2] != '.' && grille[0][2] == grille[1][2] && grille[1][2] == grille[2][2]) ||
+        // diagonales
+        (grille[0][0] != '.' && grille[0][0] == grille[1][1] && grille[1][1] == grille[2][2]) ||
+        (grille[0][2] != '.' && grille[0][2] == grille[1][1] && grille[1][1] == grille[2][0])
+       )
         {
-            return true 
+            return true ;
+        }else
+        {
+            return false;
         }
 }
