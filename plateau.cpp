@@ -32,7 +32,7 @@ void C_plateau::afficher()
          << "  +-----+-----+-----+" << endl;
 }
 
-bool C_plateau::caseLibre(char mx,char my)
+bool C_plateau::caseLibre(int mx,int my)
 {
     if (grille[mx][my] == '.')
     {
@@ -40,10 +40,11 @@ bool C_plateau::caseLibre(char mx,char my)
     }else
     {
         return false;
+
     }
 }
 
-void C_plateau::poserSymbole(char mx , char my , char mJoueur)
+void C_plateau::poserSymbole(int mx , int my , char mJoueur)
 {
     grille[mx][my] = mJoueur;
 }
@@ -68,4 +69,15 @@ bool C_plateau::victoire()
         {
             return false;
         }
+}
+
+bool C_plateau::estPlein(int mx,int my)
+{
+    if (grille[mx][my] != '.')
+    {
+        return true ;
+    }else
+    {
+        return false ;
+    }
 }

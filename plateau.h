@@ -9,10 +9,10 @@ public:
     C_plateau();
     void initialiser();
     void afficher();
-    bool caseLibre(char x,char y);
-    void poserSymbole(char x,char y , char joueur);
+    bool caseLibre(int x,int y);
+    void poserSymbole(int x,int y , char joueur);
     bool victoire();
-    bool estPlein();
+    bool estPlein(int x,int y);
 };
 
 
