@@ -71,9 +71,17 @@ bool C_plateau::victoire()
         }
 }
 
-bool C_plateau::estPlein(int mx,int my)
+bool C_plateau::estPlein()
 {
-    if (grille[mx][my] != '.')
+    if (grille[0][0] != '.'&&
+        grille[0][1] != '.'&&
+        grille[0][2] != '.'&&
+        grille[1][0] != '.'&&
+        grille[1][1] != '.'&&
+        grille[1][2] != '.'&&
+        grille[2][0] != '.'&&
+        grille[2][1] != '.'&&
+        grille[2][2] != '.')
     {
         return true ;
     }else

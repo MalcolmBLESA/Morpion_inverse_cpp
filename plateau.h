@@ -12,7 +12,7 @@ public:
     bool caseLibre(int x,int y);
     void poserSymbole(int x,int y , char joueur);
     bool victoire();
-    bool estPlein(int x,int y);
+    bool estPlein();
 };
 
 
