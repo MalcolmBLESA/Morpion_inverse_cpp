@@ -1,9 +1,30 @@
-#include <iostream>
+#include "cjeu.h"
+#include <iomanip>
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    CJeu jeu;
+
+    jeu.Jouer();
+
     return 0;
 }
+
+
+
+
+
+
+/*
+       1     2     3
+    ┌─────┬─────┬─────┐
+  1 │  .  │  .  │  .  │
+    ├─────┼─────┼─────┤
+  2 │  .  │  .  │  .  │
+    ├─────┼─────┼─────┤
+  3 │  .  │  .  │  .  │
+    └─────┴─────┴─────┘
+
+*/
